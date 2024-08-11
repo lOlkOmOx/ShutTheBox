@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
-body {
-  height: 100%;
-  margin: 0;
+.ShutTheBox {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #121212;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.Content {
+.ShutTheBox h1 {
+  color: lightgray;
+}
+
+
+.ShutTheBox .Content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,69 +20,99 @@ body {
   height: 80vh;
 }
 
-.NumberButton {
+.ShutTheBox .NumberButton {
   height: 5rem;
   width: 5rem;
   margin: 3px;
   font-size: 40px;
 }
 
-.btn-success {
+.ShutTheBox .btn-success {
   --bs-btn-disabled-bg: #198754 !important;
   --bs-btn-disabled-opacity: 1;
 }
 
-.NumberButtons {
+.ShutTheBox .NumberButtons {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.DiceButton {
+.ShutTheBox .DiceButton {
   height: 10rem;
   width: 10rem;
   margin-left: 5px;
+  background-color: #212529;
+  border-color: #212529;
+  color: lightgray
 }
 
-.DiceButtons {
+.ShutTheBox .DiceButtons {
   margin: 50px;
 }
 
-.RollButton {
+.ShutTheBox .RollButton {
   height: 5rem;
   width: 20%;
 }
 
-h1 {
+.ShutTheBox h3 {
+    color: black
+}
+
+.ShutTheBox h1 {
   text-align: center;
   font-family: "Bowlby One SC", sans-serif;
   font-weight: 400;
   font-size: 8rem
 }
 
-h2 {
+.ShutTheBox h2 {
   font-size: 8rem;
 }
 
-.Modal, .modal-header {
+.ShutTheBox .Modal, .modal-header {
   text-align: center;
-  display: block 
+  display: block;
 }
 
+.Modal .modal-content {
+  color: lightGray;
+  text-align: center
+}
+
+
 @media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 5rem; /* Zmenšete velikost písma podle potřeby */
+  .ShutTheBox  h1 {
+    font-size: 5rem; 
+  }
+  .ShutTheBox .DiceButtons {
+    margin: 10px;
+  }
+  .ShutTheBox .NumberButtons {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .ShutTheBox .DiceButton {
+    height: 6rem;
+    width: 6rem;
+  }
+  .ShutTheBox h2 {
+    font-size: 4rem;
+  }
+  .ShutTheBox .RollButton {
+    height: 5rem;
+    width: 12rem;
   }
 }
 
-/* Pro obrazovky menší než 480px (mobilní zařízení) */
 @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 3rem; /* Zmenšete velikost písma podle potřeby */
+    .ShutTheBox h1 {
+    font-size: 3rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  h1 {
-    font-size: 2rem; /* Zmenšete velikost písma podle potřeby */
+    .ShutTheBox h1 {
+    font-size: 2rem; 
   }
 }

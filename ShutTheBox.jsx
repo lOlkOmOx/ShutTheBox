@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './ShutTheBox.css';
 import React, { useState } from 'react';
 import {Button, Spinner, Modal} from 'react-bootstrap'
 
-function App() {
+function ShutTheBox() {
 
   const [two, setTwo] = useState(2)
   const [three, setThree] = useState(3)
@@ -149,7 +149,7 @@ const handleNewGame = () => {
 
 
   return (
-    <div className="App">
+    <div className="ShutTheBox">
       <h1>SHUT THE BOX!</h1>
       <div className="Content">
       <div className="NumberButtons">
@@ -175,7 +175,7 @@ const handleNewGame = () => {
         <Button className="RollButton" variant="info" disabled={currentValue !== 0} onClick={() => handleDiceRoll()}><h3>Roll!</h3></Button>
       </div>
 
-        <Modal show={!hasPossibleCombination} centered className="Modal">
+        <Modal show={!hasPossibleCombination} centered className="Modal" data-bs-theme="dark">
         <Modal.Header as="h1">
           <Modal.Title>You lost!</Modal.Title>
         </Modal.Header>
@@ -201,4 +201,4 @@ const handleNewGame = () => {
   );
 }
 
-export default App;
+export default ShutTheBox;
